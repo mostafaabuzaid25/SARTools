@@ -17,7 +17,6 @@ loadTargetFile <- function(targetFile, varInt, condRef, batch){
   target[,varInt] <- as.factor(target[,varInt])
   if (!I(condRef %in% as.character(target[,varInt]))) stop(paste("The reference level", condRef, "is not a level of the factor of interest"))
   target[,varInt] <- relevel(target[,varInt],ref=condRef)
-  target <- target[order(target[,varInt]),]
   rownames(target) <- as.character(target[,1])
   # check if varInt contains replicates
   if (min(table(target[,varInt]))<2) stop(paste("The factor of interest", varInt, "has a level without replicates"))
