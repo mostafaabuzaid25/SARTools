@@ -30,10 +30,10 @@ countsBoxplots <- function(object, group, col = c("lightblue","orange","MediumVi
 	# raw counts
     boxplot(log2(counts+1), col = col[as.integer(group)], las = 2,
 	        main = "Raw counts distribution", ylab = expression(log[2] ~ (raw ~ count + 1)))
-    legend("topright", levels(group), fill=col[1:nlevels(group)], bty="n")
+   
 	# norm counts
     boxplot(log2(norm.counts+1), col = col[as.integer(group)], las = 2,
 	        main = "Normalized counts distribution", ylab = expression(log[2] ~ (norm ~ count + 1)))
-    legend("topright", levels(group),xpd = TRUE ,fill=col[1:nlevels(group)], bty="n")
+   
   if (outfile) dev.off()
 }
