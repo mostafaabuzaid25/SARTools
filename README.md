@@ -22,7 +22,7 @@ To install the SARTools package from GitHub, open a R session and:
 
 - for Windows users only, install [Rtools](https://cran.r-project.org/bin/windows/Rtools/) or check that it is already installed (needed to build the package)
 - load the devtools R package with `library(devtools)`
-- run `install_github("PF2-pasteur-fr/SARTools", build_vignettes=TRUE)`
+- run `install_github("mostafaabuzaid25/SARTools", build_vignettes=TRUE)`
 
 ### Using Conda
 
