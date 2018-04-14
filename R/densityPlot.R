@@ -20,6 +20,6 @@ densityPlot <- function(counts, group, col=c("lightblue","orange","MediumVioletR
     for (i in 2:ncol(counts)){
       lines(density(log2(counts[,i]+1)),col=col[as.integer(group)[i]],lwd=2)
     }
-  legend("topright", levels(group), lty=1, col=col[1:nlevels(group)], lwd=2, bty="n")
+  legend("topright", xpd = TRUE,levels(group), lty=1, col=col[1:nlevels(group)], lwd=2, bty="n")
   if (outfile) dev.off()
 }
