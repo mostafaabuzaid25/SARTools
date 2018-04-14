@@ -18,6 +18,6 @@ barplotTotal <- function(counts, group, col=c("lightblue","orange","MediumViolet
 		  ylim = c(0, max(libsize)*1.2),
 		  col = col[as.integer(group)],
 		  las = 2)
-  legend("topright", levels(group), fill=col[1:nlevels(group)], bty="n")
+  legend("topright", levels(group),xpd = TRUE, fill=col[1:nlevels(group)], bty="n")
   if (outfile) dev.off()
 }
